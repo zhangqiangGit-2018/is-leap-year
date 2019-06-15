@@ -1,7 +1,6 @@
 package com.github.hcsp.controlflow;
 
 public class Main {
-
     /**
      * 判断一个给定的年份数字是不是闰年。一个年份是闰年的条件是： 如果该年份能被100整除，那当且仅当它被400整除时，它才是闰年； 否则，当它能被4整除，就是闰年。
      *

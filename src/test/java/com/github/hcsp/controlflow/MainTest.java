@@ -1,16 +1,15 @@
 package com.github.hcsp.controlflow;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
+import java.util.Random;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-class MainTest {
+public class MainTest {
     @Test
     public void test() {
-        int a = new java.util.Random().nextInt(10);
-        assertTrue(Main.isLeapYear(a * 400));
-        assertFalse(Main.isLeapYear(a * 400 + 3));
-        assertFalse(Main.isLeapYear(a * 400 + 100));
+        int a = new Random().nextInt(10);
+        Assertions.assertTrue(Main.isLeapYear(a * 400));
+        Assertions.assertFalse(Main.isLeapYear(a * 400 + 3));
+        Assertions.assertFalse(Main.isLeapYear(a * 400 + 100));
     }
 }
