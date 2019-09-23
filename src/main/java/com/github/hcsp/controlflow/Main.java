@@ -9,7 +9,11 @@ public class Main {
      * @param year 给定的年份数字
      * @return 如果该年份是闰年，返回true，否则返回false
      */
-    public static boolean isLeapYear(int year) {}
+    public static boolean isLeapYear(int year) {
+        // 4 年一润，但 100 年不润，400 年才润
+        // 即能被4整除，并且不能被100整除；或者能被400整除。
+        return year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
+    }
 
     public static void main(String[] args) {
         System.out.println(isLeapYear(1999));
