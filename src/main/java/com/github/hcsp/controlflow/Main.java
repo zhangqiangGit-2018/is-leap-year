@@ -1,7 +1,5 @@
 package com.github.hcsp.controlflow;
 
-import com.sun.xml.internal.ws.runtime.config.TubelineFeatureReader;
-
 public class Main {
     /**
      * 判断一个给定的年份数字是不是闰年。一个年份是闰年的条件是： 如果该年份能被100整除，那当且仅当它被400整除时，它才是闰年； 否则，当它能被4整除，就是闰年。
@@ -12,12 +10,7 @@ public class Main {
      * @return 如果该年份是闰年，返回true，否则返回false
      */
     public static boolean isLeapYear(int year) {
-        if (year % 100 == 0) {
-            if (year % 400 == 0) {
-                return true;
-            }
-        }
-        return year % 4 == 0 ? true : false;
+        return year % 100 == 0 ? (year % 400 == 0 ? true : false) : (year % 4 == 0 ? true : false);
     }
 
     public static void main(String[] args) {
