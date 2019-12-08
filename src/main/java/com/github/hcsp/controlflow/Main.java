@@ -9,7 +9,19 @@ public class Main {
      * @param year 给定的年份数字
      * @return 如果该年份是闰年，返回true，否则返回false
      */
-    public static boolean isLeapYear(int year) {}
+    public static boolean isLeapYear(int year) {
+        boolean result = false;
+        if(year%100 != 0 && year%4 == 0){
+            result = true;
+        }else  if(year%400 == 0){
+            result = true;
+        }
+        else
+        {
+            result = false;
+        }
+        return  result;
+    }
 
     public static void main(String[] args) {
         System.out.println(isLeapYear(1999));
