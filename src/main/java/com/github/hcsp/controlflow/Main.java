@@ -14,8 +14,9 @@ public class Main {
             return true;
         } else if (year % 4 == 0) {
             return true;
+        } else {
+            return false;
         }
-        return false;
 
     }
 
